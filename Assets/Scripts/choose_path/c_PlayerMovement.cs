@@ -196,9 +196,9 @@ public class c_PlayerMovement : MonoBehaviour
         }
 
         // Apply constant forward velocity
-        Vector3 velocity = rb.velocity;
+        Vector3 velocity = rb.linearVelocity;
         velocity.z = forwardForce * Time.fixedDeltaTime;
-        rb.velocity = velocity;
+        rb.linearVelocity = velocity;
 
         // Side movement (add velocity directly, clean)
         Vector3 sideVelocity = Vector3.zero;

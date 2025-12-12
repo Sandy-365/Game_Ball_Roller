@@ -195,13 +195,13 @@ public class M_new_multiPlayerMovement : MonoBehaviour
         rb.AddForce(moveDirection * moveSpeed, ForceMode.Acceleration);
 
         // ✅ Optional: Limit max horizontal speed
-        Vector3 horizontalVelocity = rb.velocity;
+        Vector3 horizontalVelocity = rb.linearVelocity;
         horizontalVelocity.y = 0;
 
         if (horizontalVelocity.magnitude > moveSpeed)
         {
             Vector3 limitedVelocity = horizontalVelocity.normalized * moveSpeed;
-            rb.velocity = new Vector3(limitedVelocity.x, rb.velocity.y, limitedVelocity.z);
+            rb.linearVelocity = new Vector3(limitedVelocity.x, rb.linearVelocity.y, limitedVelocity.z);
         }
     }
 

@@ -20,7 +20,6 @@ public class optipns : MonoBehaviour
         //     Debug.LogWarning("Ad manager not found, loading scene anyway.");
         //     SceneManager.LoadScene("_2_Level_Menu");
         // }
-        //NIce i am fine checking the git version controll
         SceneManager.LoadScene("_2_selectMode");
     }
 
